@@ -4,7 +4,7 @@ import "net/http"
 
 type AppError struct {
 	Code    int    `json:"-"`
-	Message string `json:"message"`
+	Message string `json:"message" example:"Something went wrong"`
 	Log     string `json:"-"`
 }
 
