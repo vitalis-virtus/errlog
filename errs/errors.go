@@ -47,3 +47,10 @@ func NewAuthenthorizationError(message string) *AppError {
 		Message: message,
 	}
 }
+
+func NewTooManyRequestsError(message string) *AppError {
+	return &AppError{
+		Code:    http.StatusTooManyRequests,
+		Message: message,
+	}
+}
