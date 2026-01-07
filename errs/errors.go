@@ -54,3 +54,10 @@ func NewTooManyRequestsError(message string) *AppError {
 		Message: message,
 	}
 }
+
+func NewConflictError(message string) *AppError {
+	return &AppError{
+		Code:    http.StatusConflict,
+		Message: message,
+	}
+}
